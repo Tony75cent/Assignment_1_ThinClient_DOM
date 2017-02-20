@@ -13,13 +13,22 @@
 
 
 $(document).ready(function (e) {
-    $("#tree").append("<ol id='top'></ol>");
 
+    $("#tree").append("<ul id='grandparentT' class='grandparent'></ul>");
+    $("#grandparentT").append("<li id='grandparent1' ><a href='#'>Grandparent</a></li>");
+    /**$("#grandparent1").append("<span id= 'spouse1'><a href='#'>&nbsp Spouse</a></span>"); **/
+    $("<a href='#'>Spouse</a>").insertAfter("#grandparent1");
 
-    $("#tree").append("<ol id='parents' class='parents'></ol>");
+    $("#grandparent1").append("<ul id='parents' class='parents'></ul>");
     $("#parents").append("<li id='child_1_1gen' class='first_gen'>First generation</li>");
+    $("#child_1_1gen").append("<span id= 'spouse2'> &nbsp Spouse</span>");
     $("#parents").append("<li id='child_2_1gen' class='first_gen'>First generation</li>");
+    $("#child_2_1gen").append("<span id= 'spouse3'> &nbsp Spouse</span>");
+
     $("#parents").append("<li id='child_3_1gen' class='first_gen'>First generation</li>");
+    $("#child_3_1gen").append("<span id= 'spouse3'> &nbsp Spouse</span>");
+  /**  $("li.grandparent1").siblings().css({"colour": "green", "border": "2px solid green"}); **/
+
 
 
     $("#child_1_1gen").append("<ul id ='child_1_2gen' class='second_gen'></ul>");
@@ -48,19 +57,7 @@ $(document).ready(function (e) {
     $("#child_3_3gen").append("<li>Third gen list item 6</li>");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
+
+
 
