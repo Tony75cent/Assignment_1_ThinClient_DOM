@@ -24,7 +24,7 @@ $(document).ready(function () {
  /** var $currItem = $(".listitem a").filter(".highLight"); **/
  /** var $currItem = $("listitem a").filter(".highLight"); **/
  /**  $(this).add("li").text($p); **/
-  $(".listitem a").filter(".highLight").append("<li>"+$p+"<li>");
+  $(".listitem a").filter(".highLight").next().append("<li>"+$p+"<li>");
 
  
 
