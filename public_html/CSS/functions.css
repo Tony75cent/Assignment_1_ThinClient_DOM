@@ -11,93 +11,102 @@ and open the template in the editor.
 
 /**
 .tree ol {
-	padding-top: 20px; position: relative;
-	
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+        padding-top: 20px; position: relative;
+        
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
 }
 **/
 
 .grandparent li{float: left; text-align: center;
-	 list-style-type: none; 
-	position: relative; 
-	padding: 20px 5px 10 5px;
+                list-style-type: none; 
+                position: relative; 
+                /**   padding: 20px 5px 10 5px **/
+                padding: 20px 5px  5px;
+                ;
 }
 
 .first_gen{
-    
+
     float: left; text-align: center;
-	 list-style-type: none; 
-	position: relative; 
-	padding: 20px 0px 10 5px; 
-        
-        
-	
-    
+    list-style-type: none; 
+    position: relative;
+    /**
+    padding: 20px 0px 10 5px; 
+    padding: 20px 0px 10 5px; 
+     **/
+     padding: 20px 0px  5px; 
+    padding: 20px 0px  5px; 
+
+
+
+
+
+
 }
 
 /**
 .first_gen{
     
     border: 1px solid #ccc;
-	padding: 5px 10px;
-	text-decoration: none;
-	color: #666;
-	font-family: arial, verdana, tahoma;
-	font-size: 11px;
-	display: inline-block;
-	
-	border-radius: 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #666;
+        font-family: arial, verdana, tahoma;
+        font-size: 11px;
+        display: inline-block;
+        
+        border-radius: 5px;
 }
 **/
 
 .first_gen li:hover {
-        	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+    background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
 
 }
 
 .third_gen li:hover{
-    	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
-    
+    background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+
 }
 
 .second_gen li:hover{
-    	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
-    
+    background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+
 }
 /**
 .grandparent{
     border: 1px solid #ccc;
-	padding: 5px 10px;
-	text-decoration: none;
-	color: #666;
-	font-family: arial, verdana, tahoma;
-	font-size: 11px;
-	display: inline-block;
-	
-	border-radius: 5px;}
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #666;
+        font-family: arial, verdana, tahoma;
+        font-size: 11px;
+        display: inline-block;
+        
+        border-radius: 5px;}
     **/
 
 .third_gen li,.second_gen li {border: 1px solid #ccc;
-	padding: 5px 10px;
-	text-decoration: none;
-	color: #666;
-	font-family: arial, verdana, tahoma;
-	font-size: 11px;
-	display: inline-block;
-	
-	border-radius: 5px;}
+                              padding: 5px 10px;
+                              text-decoration: none;
+                              color: #666;
+                              font-family: arial, verdana, tahoma;
+                              font-size: 11px;
+                              display: inline-block;
+
+                              border-radius: 5px;}
 
 /**
 .second_gen li::before,.second_gen li::after{
-	content: '';
-	position: absolute; top: 0; right: 50%;
-	border-top: 1px solid #ccc;
-	width: 50%; height: 20px;
+        content: '';
+        position: absolute; top: 0; right: 50%;
+        border-top: 1px solid #ccc;
+        width: 50%; height: 20px;
 }
 .second_gen li::after{
-	right: auto; left: 50%;
-	border-left: 1px solid #ccc;
+        right: auto; left: 50%;
+        border-left: 1px solid #ccc;
 }
 **/

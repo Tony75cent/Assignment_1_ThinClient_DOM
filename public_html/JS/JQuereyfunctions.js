@@ -17,7 +17,7 @@ $(document).ready(function (e) {
     $("#tree").append("<ul id='grandparentT' class='grandparent'></ul>");
     $("#grandparentT").append("<li id='grandparent1' ><a href='#'>Grandparent</a></li>");
     /**$("#grandparent1").append("<span id= 'spouse1'><a href='#'>&nbsp Spouse</a></span>"); **/
-    $("<a href='#'>Spouse</a>").insertAfter("#grandparent1");
+    $("<a href='#'>Spouse#</a>").insertAfter("#grandparent1");
 
     $("#grandparent1").append("<ul id='parents' class='parents'></ul>");
     $("#parents").append("<li id='child_1_1gen' class='first_gen'>First generation</li>");
@@ -55,9 +55,23 @@ $(document).ready(function (e) {
 
     $("#child_3_3gen").append("<li>Third gen list item 5</li>");
     $("#child_3_3gen").append("<li>Third gen list item 6</li>");
+ /**$( "li" ).eq( 2 ).css( "background-color", "red" ); **/
+ /** $( "li" ).eq( 2 ).addClass(".highlight"); **/
+ /** $("li").eq(2).effect("highlight", {color:"#669966"}, 3000); **/
+ /** $("li").eq(2).(function(){
+               $(".target").effect( "highlight", {color:"#669966"}, 3000 ); **/
 
+/** $( "li" ).eq( 2 ).effect("highlight",{},3000); **/
+/**
+ $("#button").click(function(){
+               $(".target").effect( "highlight", {color:"#669966"}, 3000 );
+            });
 
 });
-
+**/
+/** $("li:eq(1)").addClass("highlight"); **/
+/**$("#tree").$("li:eq(1)").addClass("highlight"); **/
+$("#child_1_1gen").addClass("highlight");
+});
 
 
