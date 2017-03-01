@@ -4,36 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<!--html>
-    <head>
-        <title>Assignment 1 Thin Client DOM</title>
-        <meta charset="UTF-8">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script  
-        src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-        <script src="jquery-3.1.1.js" type="text/javascript"></script>
-        <script src="JS/JQuereyfunctions.js" type="text/javascript"></script>
-        <link href="CSS/functions.css" rel="stylesheet" type="text/css"/>
-        <link href="CSS/highLight.css" rel="stylesheet" type="text/css"/>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div id="tree" class="target">
-            <button id = "button"> Highlight </button>
-        </div>
-    </body>
-</html-->
-<!--
-We will create a family tree using just CSS(3)
-The markup will be simple nested lists
--->
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Assignment 1 Thin Client DOM</title>
@@ -46,62 +17,48 @@ and open the template in the editor.
         <script src="jquery-3.1.1.js" type="text/javascript"></script>
         <script src="JS/nodeHighlighter.js" type="text/javascript"></script>
         <link href="CSS/highLight.css" rel="stylesheet" type="text/css"/>
-        <link href="CSS/familyTree.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="col-sm-3 sidenav">
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#section1">Home</a></li>
-                <li><button id="btn1" >Move down DOM</button></li>
-                <li><button  id="btn2">Add child</button></li>
-                <li><button>TBC</button></li>
-                <li><button >Remove child</button></li>
-            </ul><br>
 
-        </div>
         <div class="tree">
             <ul class="listitem" >
                 <li>
-                    <a href="#">Parent</a><!--This is the original line  -->
-                    <!--a><!--figure><img class="img" src="Images/FredFlinstone.png" alt=""/><figcaption>Parent</figcaption></figure--></a-->
-
-                    <ul >
+                    James
+                </li>
+                <li>
+                    George
+                </li>
+                
+                <li>
+                    <ul><li>Sean</li></ul>
+                                        <ul><li>Manus</li></ul>
+                    <ul><li>Kyle</li></ul>
+                    <ul><li>Regis</li></ul> 
+                </li>
+                <li>
+                    Anne
+                </li>
+            </ul>
+            Child
+            <ul>
+                <li>Grand Child</li>
+                <li>
+                    Grand Child
+                    <ul>
                         <li>
-
-                            <a href="#">Child</a>
-
-                            <ul>
-                                <li>
-                                    <a href="#">Grand Child</a>
-                                </li>
-                            </ul>
+                            Great Grand Child
                         </li>
                         <li>
-                            <a href="#">Child</a>
-                            <ul>
-                                <li><a href="#">Grand Child</a></li>
-                                <li>
-                                    <a href="#">Grand Child</a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Great Grand Child</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Great Grand Child</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Great Grand Child</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Grand Child</a></li>
-                            </ul>
+                            Great Grand Child
+                        </li>
+                        <li>
+                            Great Grand Child
                         </li>
                     </ul>
                 </li>
+                <li>Grand Child</li>
             </ul>
 
-        </div>
-        <div id="msg"></div>
-    </body>
+</div>
+</body>

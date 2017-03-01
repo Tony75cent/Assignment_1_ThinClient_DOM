@@ -1,0 +1,61 @@
+index.html
+<!--html>
+    <head>
+        <title>Assignment 1 Thin Client DOM</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script  
+        src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script src="jquery-3.1.1.js" type="text/javascript"></script>
+        <script src="JS/JQuereyfunctions.js" type="text/javascript"></script>
+        <link href="CSS/functions.css" rel="stylesheet" type="text/css"/>
+        <link href="CSS/highLight.css" rel="stylesheet" type="text/css"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="tree" class="target">
+            <button id = "button"> Highlight </button>
+        </div>
+    </body>
+</html-->
+<!--
+We will create a family tree using just CSS(3)
+The markup will be simple nested lists
+-->
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+-----------------------------------------------------------------------------------------------------------------
+nodeHighlighter.js
+/** var $currItem = $(".listitem a").filter(".highLight"); **/
+        /** var $currItem = $("listitem a").filter(".highLight"); **/
+        /**  $(this).add("li").text($p); **/
+        /**    $(".listitem a").filter(".highLight").append("<li>" + $p + "<li>"); **/
+
+
+
+ /**  $("<li>"+$p+"</li>").appendTo(this); **/
+        /** $currItem.this.append("li").text(p); **/
+
+        /** $(this).append("li").text(p); **/
+        /**   $(this).filter(".highLight").add("li").text(p); **/
+
+        /** $currItem.append("li a").text(p);  **/
+
+
+
+/**  var $listItems =   $(".listitem a"); **/
+    /**alert("Test@20:03"); **/
+    /**   var $currentSelectedItem = $listItems.filter(".highLight");
+     /**    var $name = $currentSelectedItem.text(); **/
+    /** $(".tree  .listitem ul").append("li").text("test@19:55"); **/
+    /**  $("#msg").text($name); **/
+    /**    $currentSelectedItem.removeClass("highLight"); **/
+    /**    $currentSelectedItem.first().addClass("highLight");  **/
+
+
+
