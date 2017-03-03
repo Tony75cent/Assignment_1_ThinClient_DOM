@@ -9,19 +9,20 @@ and open the template in the editor.
     <head>
         <title>Assignment 1 Thin Client DOM</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script  src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> 
-        <script src="jquery-3.1.1.js" type="text/javascript"></script>
-        <script src="JS/nodeHighlighter.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+        <!--script src="JS/nodeHighlighter.js" type="text/javascript"></script-->
         <link href="CSS/highLight.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/functions.js" type="text/javascript"></script>
     </head>
     <body>
 
-        <div class="tree">
+
+        <div class="container">
             <ul class="listitem" >
                 <li>
                     James
@@ -29,36 +30,40 @@ and open the template in the editor.
                 <li>
                     George
                 </li>
-                
+
                 <li>
-                    <ul><li>Sean</li></ul>
-                                        <ul><li>Manus</li></ul>
-                    <ul><li>Kyle</li></ul>
                     <ul><li>Regis</li></ul> 
                 </li>
                 <li>
                     Anne
                 </li>
             </ul>
-            Child
+            
             <ul>
-                <li>Grand Child</li>
-                <li>
-                    Grand Child
+                <li>Lilly</li>
+                <li>Mercedes</li>
+            </ul>   
                     <ul>
                         <li>
-                            Great Grand Child
+                            Keane
                         </li>
                         <li>
-                            Great Grand Child
+                            Jerome
                         </li>
                         <li>
-                            Great Grand Child
+                            Sally
                         </li>
                     </ul>
-                </li>
-                <li>Grand Child</li>
-            </ul>
+                
 
-</div>
-</body>
+        </div>
+        <div class="container">
+            <button id="moveDownDom" type="button"  class="btn btn-default" >Move down DOM</button>
+            <button id="moveUpDom" type="button" class="btn btn-primary">Move up DOM</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+        </div>
+
+    </body>

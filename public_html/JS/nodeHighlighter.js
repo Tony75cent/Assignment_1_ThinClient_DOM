@@ -26,13 +26,15 @@ $(document).ready(function () {
         $(this).removeClass("highLight");
     }
 });
+/**
 function moveDownDom() {
     var $current = $(".listitem li").filter(".highLight");
     /** $(this).add("li").text("Test@21:05"") **/
-    $current.add("li");
+ /**   $current.add("li"); **/
 
 
-}
+/**} **/
+
 
 function createNode($arg1, $arg2) {
     var $li = $(this).append("<li>" + $arg1 + "</li>",{"class":"tree li a "});
