@@ -104,7 +104,7 @@ $(function () {
             moveDownDOM();
 
         }
-      /**  elseIf **/
+        /**  elseIf **/
 
 
 
@@ -113,7 +113,40 @@ $(function () {
 
 
     }
+    /**
+    $(document).keydown(function(e){
+        if (e.keyCode == 38) {
+            moveUpDOM();
+
+        }
+
+    }
+
+**/
+$('body').on('keyup', function() {
+            if (event.which == 40) {
+                console.log('ok this is up');
+                var $theList = $('li');
+                var $currentElem = $('.highLight');
+                var pos = $theList.index($currentElem);
+
+                pos++;
+                $currentElem.removeClass('highLight');
+                $theList.eq(pos).addClass('highLight');
+            } else if (event.which == 38) {
+                console.log('ok this is up');
+                var $theList = $('li');
+                var $currentElem = $('.highLight'); 
+                var pos = $theList.index($currentElem);
+
+                pos--;
+                $currentElem.removeClass('highLight');
+                $theList.eq(pos).addClass('highLight');
+            }
+
+        });
+        
+
+        
 
 });
-
-
