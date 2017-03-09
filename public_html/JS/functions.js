@@ -6,6 +6,7 @@
 
 
 $(function () {
+    $("#title").animate({left: '250px'});
     var $theList;/** The vars $theList and  pos were  declared outside any function, 
      *    so that a current updated version could be invoked
      *    by any function requiring it. **/
