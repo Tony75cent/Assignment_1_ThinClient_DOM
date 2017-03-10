@@ -21,13 +21,13 @@
                         <button id="moveDownDom" type="button"  class="btn btn-default" >Move down DOM</button>
                         <button id="moveUpDom" type="button" class="btn btn-primary">Move up DOM</button>
                         <button id="addNewChild" type="button" class="btn btn-success">Add new child </button>
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new child</button>
-                        <button id="changeText" type="button" class="btn btn-info">ChangeText</button>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#changeText">Add new child</button>
+                        <!--button id="changeText" type="button" class="btn btn-info">ChangeText</button-->
                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myOtherModal">ChangeText</button>
 
                         <button id="removeChild" type="button" class="btn btn-warning">Remove child</button>
                         <button id="addSibling" type="button" class="btn btn-danger">Add sibling</button>
-                        <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal fade" id="changeText" role="dialog">
                             <div class="modal-dialog">
 
                                 <!-- Modal content-->
@@ -38,11 +38,10 @@
                                     </div>
                                     <div class="modal-body">
                                         <p>What is the childs name</p>
-                                        <img src="Images/BarnyRubble.png" alt=""  height="60" width="60"/>
-
+                                        <img src="Images/WilmaFlinstone.jpg" alt="" height="60" width="60"/>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close, if you are done</button>
+                                        <button id="btnClose" type="button" class="btn btn-default" data-dismiss="modal">Close, if you are done</button>
                                     </div>
                                 </div>
 
@@ -59,11 +58,11 @@
                                     </div>
                                     <div class="modal-body">
                                         <p>What is the new text</p>
-                                        <img src="Images/BarnyRubble.png" alt=""  height="60" width="60"/>
-
+                                        <img src="Images/FredFlinstone.png" alt=""height="70" width="70"/>
+                                        <input type="text" class="form-control" id="newname" placeholder="Enter  new name">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Ok, that it, yeah ?</button>
+                                        <button id="btnClose2" type="button" class="btn btn-default" data-dismiss="modal">Ok, that it, yeah ?</button>
                                     </div>
                                 </div>
 
@@ -112,6 +111,8 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
 
-                </body>
-                </html>
+    </body>
+</html>

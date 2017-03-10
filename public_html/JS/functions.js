@@ -6,7 +6,10 @@
 
 
 $(function () {
-    $("#title").animate({left: '250px'});
+
+   /** $("#title").animate({left: '250px'}); **/
+    $("li:eq(0)").addClass("highLight");
+
     var $theList;/** The vars $theList and  pos were  declared outside any function, 
      *    so that a current updated version could be invoked
      *    by any function requiring it. **/
@@ -18,9 +21,12 @@ $(function () {
     $("#moveDownDom").on("click", moveDownDOM);
     $("#moveUpDom").on("click", moveUpDOM);
     $("#addNewChild").on("click", addNewChild);
-    $("#changeText").on("click", changeText);
+    /** $("#changeText").on("click", changeText); **/
+    $("#changeText").on("click", changeText2);
+
     $("#removeChild").on("click", removeChild);
     $("#addSibling").on("click", addSibling);
+    $("#btnClose2").on("click", changeText2());
 
 
 
@@ -78,6 +84,14 @@ $(function () {
 
 
     }
+    function changeText2() {
+        var $newName = $("#newname").text();
+       /**  $current = $("li").filter(".highLight"); **/
+        $current.text($newName);
+
+
+
+    }
     function addNewChild() {
         var $newName = prompt("Enter the new name", "");
         $current = $("li").filter(".highLight");
@@ -105,7 +119,6 @@ $(function () {
             moveDownDOM();
 
         }
-        /**  elseIf **/
 
 
 
@@ -114,40 +127,36 @@ $(function () {
 
 
     }
-    /**
-    $(document).keydown(function(e){
-        if (e.keyCode == 38) {
-            moveUpDOM();
 
+    $('body').on('keyup', function () {
+        if (event.which == 40) {
+            console.log('ok this is up');
+            var $theList = $('li');
+            var $currentElem = $('.highLight');
+            var pos = $theList.index($currentElem);
+
+            pos++;
+            $currentElem.removeClass('highLight');
+            $theList.eq(pos).addClass('highLight');
+        } else if (event.which == 38) {
+            console.log('ok this is up');
+            var $theList = $('li');
+            var $currentElem = $('.highLight');
+            var pos = $theList.index($currentElem);
+
+            pos--;
+            $currentElem.removeClass('highLight');
+            $theList.eq(pos).addClass('highLight');
         }
 
+    });
+
+    function getInputText() {
+        var $newname = $("#newname").text();
+
     }
 
-**/
-$('body').on('keyup', function() {
-            if (event.which == 40) {
-                console.log('ok this is up');
-                var $theList = $('li');
-                var $currentElem = $('.highLight');
-                var pos = $theList.index($currentElem);
 
-                pos++;
-                $currentElem.removeClass('highLight');
-                $theList.eq(pos).addClass('highLight');
-            } else if (event.which == 38) {
-                console.log('ok this is up');
-                var $theList = $('li');
-                var $currentElem = $('.highLight'); 
-                var pos = $theList.index($currentElem);
 
-                pos--;
-                $currentElem.removeClass('highLight');
-                $theList.eq(pos).addClass('highLight');
-            }
-
-        });
-        
-
-        
 
 });
