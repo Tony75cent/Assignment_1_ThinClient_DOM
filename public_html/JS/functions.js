@@ -8,7 +8,7 @@
 $(function () {
 
    /** $("#title").animate({left: '250px'}); **/
-    $("li:eq(0)").addClass("highLight");
+    $("li:eq(0)").addClass('highLight');
 
     var $theList;/** The vars $theList and  pos were  declared outside any function, 
      *    so that a current updated version could be invoked
@@ -21,12 +21,13 @@ $(function () {
     $("#moveDownDom").on("click", moveDownDOM);
     $("#moveUpDom").on("click", moveUpDOM);
     $("#addNewChild").on("click", addNewChild);
-    /** $("#changeText").on("click", changeText); **/
-    $("#changeText").on("click", changeText2);
+     $("#changeText").on("click", changeText); 
+ /**   $("#changeText").on("click", changeText2); **/
 
     $("#removeChild").on("click", removeChild);
     $("#addSibling").on("click", addSibling);
-    $("#btnClose2").on("click", changeText2());
+    $("#btnClose2").on("click", changeText2);
+  /**  $("#newname").on("click",changeText2); **/
 
 
 
@@ -64,7 +65,7 @@ $(function () {
         {
             $tmp = $currentElem.children("li:eq(0)");
             $cur = $tmp.parent(this);
-            $cur.addClass("highLight");
+            $cur.addClass('highLight');
         } else
             $theList.eq(pos).addClass('highLight');
     }
@@ -73,10 +74,10 @@ $(function () {
 
 
     function changeText() {
-        var $newName = prompt("Enter the new name", "");
-        $current = $("li").filter(".highLight"); /**The global variable $current is referenced to the 
+        var newName = prompt("Enter the new name", "");
+        $current = $("li").filter('.highLight'); /**The global variable $current is referenced to the 
          single li which has the claa highLight attached to it **/
-        $current.text($newName);
+        $current.text(newName);
 
 
 
@@ -85,16 +86,24 @@ $(function () {
 
     }
     function changeText2() {
-        var $newName = $("#newname").text();
+       /** var $newName = $("#newname").text(); **/
+               /** var $newName = $("this").text(); **/
+                var $newName = $("#newname").val();
+               /** alert($newName);**/
+             /**   console.log("Test"+$newName); **/
+
        /**  $current = $("li").filter(".highLight"); **/
-        $current.text($newName);
+   var     $current = $("li").filter('highLight');
+      /**  $current.text($newName); **/
+                $current.val($newName);
+
 
 
 
     }
-    function addNewChild() {
+    function addNewChild() { /**This function works **/
         var $newName = prompt("Enter the new name", "");
-        $current = $("li").filter(".highLight");
+        $current = $("li").filter('.highLight');
         $current.append("<li>" + $newName + "</li>");
         moveDownDOM();/**Invoke the moveDownDOM() function, so that the new li is referenced
          *                        as the $current DOM  element  **/
@@ -104,13 +113,13 @@ $(function () {
 
     function removeChild() {
 
-        $current = $("li").filter(".highLight");
+        $current = $("li").filter('.highLight');
         $current.remove(".highLight");
         moveDownDOM();
     }
     function addSibling() {
         var $newName = prompt("Enter the new name", "");
-        $current = $("li").filter(".highLight");
+        $current = $("li").filter('.highLight');
         /**  $($current).after("<li>" + $newName + "</li>"); **/
         /**  $($current).next().append("<li>" + $newName + "</li>"); **/
         if ($($current).is("li")) {
@@ -127,6 +136,7 @@ $(function () {
 
 
     }
+    /**
 
     $('body').on('keyup', function () {
         if (event.which == 40) {
@@ -150,7 +160,7 @@ $(function () {
         }
 
     });
-
+**/
     function getInputText() {
         var $newname = $("#newname").text();
 
