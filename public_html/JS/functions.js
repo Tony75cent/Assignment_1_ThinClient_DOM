@@ -88,14 +88,15 @@ $(function () {
     function changeText2() {
        /** var $newName = $("#newname").text(); **/
                /** var $newName = $("this").text(); **/
-                var $newName = $("#newname").val();
-               /** alert($newName);**/
+                var $newName = $("#newname").html();
+                alert($newName);
              /**   console.log("Test"+$newName); **/
 
        /**  $current = $("li").filter(".highLight"); **/
-   var     $current = $("li").filter('highLight');
+      $current = $("li").filter('.highLight');
+      alert($current.html());
       /**  $current.text($newName); **/
-                $current.val($newName);
+    return            $current.val($newName);
 
 
 
