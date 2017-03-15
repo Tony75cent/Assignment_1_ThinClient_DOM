@@ -6,7 +6,6 @@
 
 
 $(function () {
-    alert("DOM loaded");
     /** console.log($('#container li').text()); **/
     console.log("Test2 " + $("#listitem li").text());
 
@@ -91,20 +90,13 @@ $(function () {
 
     }
     function changeText2() {
-        /**This is the Modal input  **/
-        /** var $newName = $("#newname").text(); **/
-        /** var $newName = $("this").text(); **/
         var $newName = $("#newname").val();
-        alert($newName);
-        /**   console.log("Test"+$newName); **/
 
-        /**  $current = $("li").filter(".highLight"); **/
         $current = $("li").filter('.highLight');
-        alert($current.html());
-        /**  $current.text($newName); **/
-        $current.val($newName);
-        $current.
-                alert($current.html());
+    /**    $current.val($newName); **/
+       $($current).html($newName);
+        
+
 
 
 
