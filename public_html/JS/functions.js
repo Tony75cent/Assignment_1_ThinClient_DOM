@@ -6,8 +6,12 @@
 
 
 $(function () {
+    alert("DOM loaded");
+    /** console.log($('#container li').text()); **/
+    console.log("Test2 " + $("#listitem li").text());
 
-   /** $("#title").animate({left: '250px'}); **/
+
+    /** $("#title").animate({left: '250px'}); **/
     $("li:eq(0)").addClass('highLight');
 
     var $theList;/** The vars $theList and  pos were  declared outside any function, 
@@ -21,13 +25,14 @@ $(function () {
     $("#moveDownDom").on("click", moveDownDOM);
     $("#moveUpDom").on("click", moveUpDOM);
     $("#addNewChild").on("click", addNewChild);
-     $("#changeText").on("click", changeText); 
- /**   $("#changeText").on("click", changeText2); **/
+    $("#changeText").on("click", changeText);
+    /**   $("#changeText").on("click", changeText2); **/
 
     $("#removeChild").on("click", removeChild);
     $("#addSibling").on("click", addSibling);
     $("#btnClose2").on("click", changeText2);
-  /**  $("#newname").on("click",changeText2); **/
+    $("#showSubDomTree").on("click", showSubDOMTree);
+    /**  $("#newname").on("click",changeText2); **/
 
 
 
@@ -86,17 +91,21 @@ $(function () {
 
     }
     function changeText2() {
-       /** var $newName = $("#newname").text(); **/
-               /** var $newName = $("this").text(); **/
-                var $newName = $("#newname").html();
-                alert($newName);
-             /**   console.log("Test"+$newName); **/
+        /**This is the Modal input  **/
+        /** var $newName = $("#newname").text(); **/
+        /** var $newName = $("this").text(); **/
+        var $newName = $("#newname").val();
+        alert($newName);
+        /**   console.log("Test"+$newName); **/
 
-       /**  $current = $("li").filter(".highLight"); **/
-      $current = $("li").filter('.highLight');
-      alert($current.html());
-      /**  $current.text($newName); **/
-    return            $current.val($newName);
+        /**  $current = $("li").filter(".highLight"); **/
+        $current = $("li").filter('.highLight');
+        alert($current.html());
+        /**  $current.text($newName); **/
+        $current.val($newName);
+        $current.
+                alert($current.html());
+
 
 
 
@@ -138,36 +147,50 @@ $(function () {
 
     }
     /**
-
-    $('body').on('keyup', function () {
-        if (event.which == 40) {
-            console.log('ok this is up');
-            var $theList = $('li');
-            var $currentElem = $('.highLight');
-            var pos = $theList.index($currentElem);
-
-            pos++;
-            $currentElem.removeClass('highLight');
-            $theList.eq(pos).addClass('highLight');
-        } else if (event.which == 38) {
-            console.log('ok this is up');
-            var $theList = $('li');
-            var $currentElem = $('.highLight');
-            var pos = $theList.index($currentElem);
-
-            pos--;
-            $currentElem.removeClass('highLight');
-            $theList.eq(pos).addClass('highLight');
-        }
-
-    });
-**/
+     
+     $('body').on('keyup', function () {
+     if (event.which == 40) {
+     console.log('ok this is up');
+     var $theList = $('li');
+     var $currentElem = $('.highLight');
+     var pos = $theList.index($currentElem);
+     
+     pos++;
+     $currentElem.removeClass('highLight');
+     $theList.eq(pos).addClass('highLight');
+     } else if (event.which == 38) {
+     console.log('ok this is up');
+     var $theList = $('li');
+     var $currentElem = $('.highLight');
+     var pos = $theList.index($currentElem);
+     
+     pos--;
+     $currentElem.removeClass('highLight');
+     $theList.eq(pos).addClass('highLight');
+     }
+     
+     });
+     **/
     function getInputText() {
         var $newname = $("#newname").text();
 
     }
 
+    function showSubDOMTree() {
+        /**  $current = $("li").filter('.highLight');  **/
+        /**    var   $current = $('#container li').text(); **/
+        /**   $current = $('#familyNames li').children().text(); **/
+        /**  $current = $('#familyNames li').text(); **/
+        /** $current = $('.highLight').text(); **/
+        $current = $('.highLight').parent().text();
 
+
+        /**  $current = $(this).parents(); **/
+        /**alert($current.children()); /**$current.children(); **/
+
+        /** console.log($('#container li').text()); **/
+        alert($current);
+    }
 
 
 });
