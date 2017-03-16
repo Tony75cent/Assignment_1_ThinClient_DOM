@@ -17,110 +17,120 @@
             <h1>Thin Client Assingement 1 DOM </h1>
             <div class="row">
                 <div class="col-sm-4" style="background-color:lavender;">
+
                     <div class="btn-group-vertical">
                         <button id="moveDownDom" type="button"  class="btn btn-default" >Move down DOM</button>
                         <button id="moveUpDom" type="button" class="btn btn-primary">Move up DOM</button>
-                        <button id="addNewChild" type="button" class="btn btn-success">Add new child </button>
-                        <button type="button" class="btn btn-info btn-default" data-toggle="modal" data-target="#changeText">Modal_Add new child</button>
+                        <!--button id="addNewChild" type="button" class="btn btn-success">Add new child </button-->
+                        <button type="button" class="btn btn-info btn-success" data-toggle="modal" data-target="#addChildModal">Modal_Add new child</button>
                         <!--button id="changeText" type="button" class="btn btn-info">ChangeText</button-->
                         <button type="button" class="btn btn-info btn-default" data-toggle="modal" data-target="#myOtherModal">Modal_ChangeText</button>
 
                         <button id="removeChild" type="button" class="btn btn-warning">Remove child</button>
                         <button id="addSibling" type="button" class="btn btn-danger">Add sibling</button>
                         <button id="showSubDomTree" type="button" class="btn btn-default">Show parents</button>
-
-                        <div class="modal fade" id="changeText" role="dialog">
-                            <div class="modal-dialog">
-
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Information request</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>What is the childs name</p>
-                                        <img src="Images/WilmaFlinstone.jpg" alt="" height="60" width="60"/>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button id="btnClose" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="modal fade" id="myOtherModal" role="dialog">
+                        <!--This is the addChild Modal dialogue box -->
+                        <div class="modal fade" id="addChildModal" role="dialog">
                             <div class="modal-dialog">
 
                                 <!-- Modal content--><!-- Change Text button -->
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Text information request</h4>
+                                        <h4 class="modal-title">What is the new childs name ?</h4>
                                     </div>
                                     <div class="modal-body">
                                         <p>What is the new text</p>
-                                        <img src="Images/FredFlinstone.png" alt=""height="70" width="70"/>
-                                        <input id="newname" type="text" class="form-control"  placeholder="Enter  new name">
+                                        <!--img src="Images/FredFlinstone.png" alt=""height="70" width="70"/-->
+                                        <input id="addChildsName" type="text" class="form-control"  placeholder="Enter  childs name">
                                     </div>
                                     <div class="modal-footer">
-                                        <button id="btnClose2" type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                                        <button id="btnClose3" type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
-                <div class="col-sm-8" style="background-color:lavenderblush;">
-                    <div id="familyNames">
-                        <div class="container">
-                            <ul class="listitem" >
-                                <li>
-                                    Thomas
-                                </li>
-                                <li>
-                                    Harold
-                                </li>
+                <div class="modal fade" id="myOtherModal" role="dialog">
+                    <div class="modal-dialog">
 
-                                <li>
-                                    <ul><li>Igor</li></ul> 
-                                </li>
-
-                            </ul>
-
-                            <ul>
-                                <li>Norman</li>
-                                <li>Chantell</li>
-                            </ul>   
-                            <ul>
-                                <li>
-                                    Leyone
-                                </li>
-                                <li>
-                                    Ivan
-                                </li>
-                                <li>
-                                    Edward
-                                </li>
-                                <li>
-                                    Neville
-                                </li>
-                                <li>
-                                    Tadg
-                                </li>
-                            </ul>
-
-
+                        <!-- Modal content--><!-- Change Text button -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Text information request</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>What is the new text</p>
+                                <img src="Images/FredFlinstone.png" alt=""height="70" width="70"/>
+                                <input id="newname" type="text" class="form-control"  placeholder="Enter  new name">
+                            </div>
+                            <div class="modal-footer">
+                                <button id="btnClose2" type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                            </div>
                         </div>
 
                     </div>
                 </div>
+
             </div>
+
+<div class="col-sm-8" style="background-color:lavenderblush;">
+
+        <div id="familyNames">
+            <div class="container">
+                <ul class="listitem" >
+                    <li>
+                        Thomas
+                    </li>
+                    <li>
+                        Harold
+                    </li>
+
+                    <li>
+                        <ul><li>Igor</li></ul> 
+                    </li>
+
+                </ul>
+
+                <ul>
+                    <li>Norman</li>
+                    <li>Chantell</li>
+                </ul>   
+                <ul>
+                    <li>
+                        Leyone
+                    </li>
+                    <li>
+                        Ivan
+                    </li>
+                    <li>
+                        Edward
+                    </li>
+                    <li>
+                        Neville
+                    </li>
+                    <li>
+                        Tadg
+                    </li>
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
+
         </div>
 
-    </body>
+
+
+  <!--  </div> -->
+    
+<!--/div-->
+  <!--  </div> -->
+
+</body>
 </html>

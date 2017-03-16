@@ -31,6 +31,7 @@ $(function () {
     $("#addSibling").on("click", addSibling);
     $("#btnClose2").on("click", changeText2);
     $("#showSubDomTree").on("click", showSubDOMTree);
+    $("#btnClose3").on("click",addNewChild2);
     /**  $("#newname").on("click",changeText2); **/
 
 
@@ -91,9 +92,8 @@ $(function () {
     }
     function changeText2() {
         var $newName = $("#newname").val();
-
+/** This is being used with the Modal dialogue box**/
         $current = $("li").filter('.highLight');
-    /**    $current.val($newName); **/
        $($current).html($newName);
         
 
@@ -109,6 +109,19 @@ $(function () {
         $current.append("<li>" + $newName + "</li>");
         moveDownDOM();/**Invoke the moveDownDOM() function, so that the new li is referenced
          *                        as the $current DOM  element  **/
+
+
+    }
+
+function addNewChild2() { 
+            var $newName = $("#addChildsName").val();
+
+       /** var $newName = prompt("Enter the new name", ""); **/
+        /** This is being used with the Modal dialogue box**/
+
+        $current = $("li").filter('.highLight');
+        $current.append("<li>" + $newName + "</li>");
+        moveDownDOM();
 
 
     }
