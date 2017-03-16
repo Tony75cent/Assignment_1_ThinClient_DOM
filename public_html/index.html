@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="CSS/highLight.css" rel="stylesheet" type="text/css"/>
+        <link href="CSS/col2.css" rel="stylesheet" type="text/css"/>
         <script src="JS/functions.js" type="text/javascript"></script>
 
     </head>
@@ -16,7 +17,8 @@
         <div class="container-fluid">
             <h1>Thin Client Assingement 1 DOM </h1>
             <div class="row">
-                <div class="col-sm-4" style="background-color:lavender;">
+                <div id="col1" class="col-sm-4" style="background-color:lavender;">
+
 
                     <div class="btn-group-vertical">
                         <button id="moveDownDom" type="button"  class="btn btn-default" >Move down DOM</button>
@@ -29,6 +31,7 @@
                         <button id="removeChild" type="button" class="btn btn-warning">Remove child</button>
                         <button id="addSibling" type="button" class="btn btn-danger">Add sibling</button>
                         <button id="showSubDomTree" type="button" class="btn btn-default">Show parents</button>
+                    </div>
                         <!--This is the addChild Modal dialogue box -->
                         <div class="modal fade" id="addChildModal" role="dialog">
                             <div class="modal-dialog">
@@ -77,7 +80,8 @@
 
             </div>
 
-<div class="col-sm-8" style="background-color:lavenderblush;">
+<div id="col2" class="col-sm-8" style="background-color:lavenderblush;">
+
 
         <div id="familyNames">
             <div class="container">
@@ -123,14 +127,8 @@
         </div>
     </div>
 
-        </div>
 
 
-
-  <!--  </div> -->
-    
-<!--/div-->
-  <!--  </div> -->
 
 </body>
 </html>
