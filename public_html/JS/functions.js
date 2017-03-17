@@ -6,11 +6,8 @@
 
 
 $(function () {
-    /** console.log($('#container li').text()); **/
-    console.log("Test2 " + $("#listitem li").text());
 
 
-    /** $("#title").animate({left: '250px'}); **/
     $("li:eq(0)").addClass('highLight');
 
     var $theList;/** The vars $theList and  pos were  declared outside any function, 
@@ -25,14 +22,13 @@ $(function () {
     $("#moveUpDom").on("click", moveUpDOM);
     $("#addNewChild").on("click", addNewChild);
     $("#changeText").on("click", changeText);
-    /**   $("#changeText").on("click", changeText2); **/
 
     $("#removeChild").on("click", removeChild);
     $("#addSibling").on("click", addSibling);
     $("#btnClose2").on("click", changeText2);
     $("#showSubDomTree").on("click", showSubDOMTree);
-    $("#btnClose3").on("click",addNewChild2);
-    /**  $("#newname").on("click",changeText2); **/
+    $("#btnClose3").on("click", addNewChild2);
+    $("#changeImage").on("click", changeImage);
 
 
 
@@ -92,11 +88,12 @@ $(function () {
     }
     function changeText2() {
         var $newName = $("#newname").val();
-/** This is being used with the Modal dialogue box**/
+        /** This is being used with the Modal dialogue box**/
         $current = $("li").filter('.highLight');
-       $($current).html($newName);
-        
+        $($current).html($newName);
 
+
+     
 
 
 
@@ -113,11 +110,8 @@ $(function () {
 
     }
 
-function addNewChild2() { 
-            var $newName = $("#addChildsName").val();
-
-       /** var $newName = prompt("Enter the new name", ""); **/
-        /** This is being used with the Modal dialogue box**/
+    function addNewChild2() {
+        var $newName = $("#addChildsName").val();
 
         $current = $("li").filter('.highLight');
         $current.append("<li>" + $newName + "</li>");
@@ -144,13 +138,26 @@ function addNewChild2() {
 
         }
 
+        function changeImage() {
+
+             $current = $("li").filter('.highLight');
+            $current.
+            $(this).attr("src", "Penguins.jpg");
 
 
 
 
+        }
 
 
     }
+
+
+
+
+
+
+
     /**
      
      $('body').on('keyup', function () {
